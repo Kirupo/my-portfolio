@@ -1,0 +1,805 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap'); 
+
+* { 
+    box-sizing: inherit;
+} 
+
+body,html{ 
+    margin: 0; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+    -webkit-font-kerning: normal;
+    -ms-font-feature-settings: "kern","liga","clig","calt"; 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
+    font-family: Lato,sans-serif; 
+    font-weight: 400;
+    font:112.5%/1.45em georgia,serif;
+    font-kerning: normal; 
+    font-feature-settings: "kern","liga","clig","calt";
+    color: #fff; 
+    background-color: #111a28; 
+    word-wrap: break-word;     
+    box-sizing: border-box; 
+    overflow-y: scroll;
+}  */
+
+/* p { 
+    padding: 0;    
+    margin: 0; 
+    font-weight: 400px; 
+    color: hsla(0,0%,100%,.85);
+}  */
+
+/* 
+.nav-bar{
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px 100px;
+    list-style: none;
+    text-transform:uppercase;
+    gap:5%;
+    z-index: 10;
+    width: 100%;
+    font-size: 0.85em;
+}
+
+.nav-bar li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover{
+    color: #00cf5d;
+} 
+
+*,:after,:before { 
+    box-sizing: inherit;
+} 
+:selection { 
+    background: #1d293a;
+} 
+    
+.container { 
+    width: 1200px; 
+    padding: 100px 25px; 
+    margin: 0 auto;
+}  
+*/
+
+/* 
+.title { 
+    position: absolute; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+} 
+
+.title.left { 
+    justify-content: flex-end; 
+    left: 5px;
+} 
+
+.title.left.social { 
+    justify-content: space-between;
+} 
+
+.title li a{
+    font-size:1.1em;
+}
+
+.title hr{
+    transform: rotate(90deg) translateX(-105px);
+    width: 5em;
+}
+
+.title:after { 
+    content: ""; 
+    position: absolute; 
+    height: 100%; 
+    width: 2px; 
+    margin: 15px 0; 
+    background: hsla(0,0%,100%,.85); 
+    z-index: -1;
+} 
+
+.title ul  { 
+    padding: 5px; 
+    background-color: #111a28;
+} 
+
+.title p  { 
+    color: hsla(0,0%,100%,.85);
+    padding: 5px 10px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    background-color: #1d293a; 
+    transform-origin: 50%; 
+    border-radius: 4px;
+} 
+
+.title.left p  { 
+    transform: rotate(-90deg);
+} 
+
+.title.right { 
+    right: 35px;
+} 
+
+.title ul li  { 
+    margin-bottom: 10px;
+} 
+
+.title.title.right p  { 
+    transform: rotate(90deg);
+} 
+
+.title ul li a  { 
+    color: hsla(0,0%,100%,.85);
+}  
+    
+.intro { 
+    padding-left: 100px; 
+    padding-top: 50px;
+} 
+.intro p  { 
+    font-size: 22px; 
+    color: #00cf5d;
+} 
+
+.intro h1  { 
+    font-size: 78px; 
+    font-weight: 900; 
+    margin-bottom: 25px;
+} 
+
+.intro h3  { 
+    color: #00cf5d;
+} 
+
+.intro ul  { 
+    display: flex; 
+    margin-bottom: 25px;
+} 
+
+.intro ul li  { 
+    position: relative; 
+    margin-right: 25px; 
+    color: hsla(0,0%,100%,.85);
+    
+} 
+
+.intro ul li::before { 
+    position: absolute; 
+    content: ""; 
+    left: -15px; 
+    top: 10px; 
+    background-color: #00cf5d; 
+    width: 8px; 
+    height: 8px; 
+    border-radius: 10px;
+} 
+
+.intro ul li:first-child::before { 
+    display: none;
+} 
+
+ul { 
+    margin: 0; 
+    list-style: none;
+    padding: 0;
+} 
+
+li { 
+    margin-bottom: 0;
+} 
+
+ul li  { 
+    padding-left: 0;
+} 
+
+.btn { 
+    display: inline-block; 
+    border-style: solid; 
+    border-width: 2px; 
+    padding: 15px 25px; 
+    border-radius: 4px; 
+    text-decoration: none;
+} 
+
+.about-area { 
+    position: relative;
+} 
+
+
+.about { 
+    padding-right: 100px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+} 
+
+.about > *  { 
+    flex: 1 1;
+} 
+
+.about-image { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+} 
+
+.about-details p  { 
+    line-height: 2;
+} 
+
+.about-action { 
+    margin-top: 25px;
+} 
+
+.about-image img  { 
+    width: 320px; 
+    border-radius: 10px; 
+    transform: scale(.95); 
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(1); 
+    transition: all 1s;
+} 
+
+.about-image:hover img { 
+    transform: scale(1); 
+    -webkit-filter: grayscale(0); 
+    filter: grayscale(0);
+} 
+
+#style-SHCZ6.style-SHCZ6 {  
+   margin-left:15px;  
+   color:rgba(255, 255, 255, 0.85);  
+   border-color:#00cf5d;  
+   background-color:transparent;  
+}  
+
+.skill-area { 
+    position: relative;
+} 
+
+.skills { 
+    padding-left: 100px;
+} 
+
+.skill-nav { 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-bottom: 25px;
+} 
+
+.skill { 
+    display: flex; 
+    flex-wrap: wrap;
+} 
+
+.skill-nav li  { 
+    border: 2px solid #00cf5d; 
+    color: hsla(0,0%,100%,.85); 
+    padding: 5px 25px; 
+    margin-right: 15px; 
+    cursor: pointer; 
+    border-radius: 4px;
+} 
+
+.skill-nav li.active  { 
+    background-color: #00cf5d; 
+    font-weight: 900;
+} 
+
+.skill-nav li:last-child  { 
+    margin-right: 0;
+} 
+
+.skill > *  { 
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: calc(50% - 30px);
+} 
+
+.skill .card  { 
+    position: relative; 
+    background-color: #1d293a; 
+    padding: 25px 25px 35px; 
+    margin: 15px; 
+    border-radius: 4px;
+} 
+
+.skill > :first-child  { 
+    margin-top: 0;
+} 
+
+.skill > :nth-child(2n-1)  { 
+    margin-left: 0;
+} 
+
+.skill > :nth-child(2)  { 
+    margin-top: 0;
+} 
+
+.skill > :nth-child(2n)  { 
+    margin-right: 0;
+} 
+
+.skill > :last-child  { 
+    margin-right: 0; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
+    flex-basis: calc(50% - 15px);
+} 
+
+.skill .card h4  { 
+    font-size: 22px; 
+    font-weight: 900; 
+    color: hsla(0,0%,100%,.85);
+} 
+
+.skill .card p  { 
+    padding: 3px 5px; 
+    top: 25px; 
+    font-weight: 900; 
+    color: #fff; 
+    right: 15px;
+    position: absolute; 
+    background-color: #00cf5d; 
+    border-radius: 4px;
+} 
+
+.skill .card .progress-ar  { 
+    position: absolute; 
+    background-color: #00cf5d; 
+    border-radius: 4px;
+} 
+
+.skill .card .progress-ar  { 
+    bottom: 0; 
+    left: 0; 
+    height: 10px;
+} 
+
+
+.portfolio-area { 
+    position: relative;
+} 
+
+.portfolios { 
+    padding-left: 100px;
+} 
+
+.portfolio-nav { 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-bottom: 25px;
+} 
+
+.portfolio-items { 
+    display: flex; 
+    flex-wrap: wrap;
+} 
+
+.portfolio-action { 
+    text-align: center;
+} 
+
+
+.portfolio-nav li  { 
+    border: 2px solid #00cf5d; 
+    color: hsla(0,0%,100%,.85); 
+    padding: 5px 25px; 
+    margin-right: 15px; 
+    cursor: pointer; 
+    border-radius: 4px;
+} 
+
+.portfolio-nav li.active  { 
+    background-color: #00cf5d; 
+    font-weight: 900;
+} 
+
+.portfolio-items > *  { 
+    margin: 15px; 
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: calc(33.33333% - 30px); 
+    background-color: #1d293a; 
+    color: hsla(0,0%,100%,.85); 
+    border-radius: 4px;
+} 
+
+.portfolio-items > :nth-child(3n-2)  { 
+    margin-left: 0;
+} 
+
+.portfolio-items > :last-child ,.portfolio-items > :nth-child(3n + 3)  { 
+    margin-right: 0;
+} 
+
+.portfolio-items > :nth-child(3n + 3)  { 
+    margin-right: 0;
+} 
+
+.portfolio-items .portfolio-img  { 
+    position: relative;
+} 
+
+.portfolio-items .portfolio-img::after { 
+    position: absolute; 
+    content: ""; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 1; 
+    background: #1d293a; 
+    mix-blend-mode: color; 
+    transition: all .5s;
+} 
+
+.portfolio-items .portfolio:hover .portfolio-img::after { 
+    opacity: 0;
+} 
+
+.portfolio-items .details  { 
+    padding: 25px;
+} 
+
+.portfolio-items .portfolio-img img  { 
+    border-radius: 4px;
+} 
+
+.portfolio-items .details h4  { 
+    font-size: 26px; 
+    font-weight: 900; 
+    margin-bottom: 15px;
+} 
+
+.portfolio-items .portfolio .links  { 
+    margin-top: 15px;
+} 
+
+.portfolio-items .portfolio-tools  { 
+    display: flex; 
+    margin-top: 15px;
+} 
+
+.portfolio-items .portfolio.small h4  { 
+    font-size: 22px;
+} 
+
+.portfolio-items .details h4 a  { 
+    text-decoration: none; 
+    color: inherit;
+} 
+
+.portfolio-items .portfolio .links ul  { 
+    display: flex; 
+    font-size: 22px;
+} 
+
+.portfolio-items .portfolio-tools li  { 
+    margin-right: 15px; 
+    text-decoration: none; 
+    font-weight: 300; 
+    color: hsla(0,0%,100%,.65); 
+    font-size: 16px;
+} 
+
+.portfolio-items .portfolio .links ul li  { 
+    margin-right: 10px;
+} 
+
+.portfolio-items .portfolio .links ul li a  { 
+    color: hsla(0,0%,100%,.65); 
+    transition: all .2s;
+} 
+
+.portfolio-items .portfolio .links ul li a:hover { 
+    color: #00cf5d;
+} 
+
+h1 { 
+    font-size: 2em; 
+    font-size: 2.25rem;
+    margin: .67em 0;
+    padding: 0; 
+    color: inherit; 
+    font-weight: 700; 
+    text-rendering: optimizeLegibility; 
+    line-height: 1.1;
+} 
+
+h3 { 
+    padding: 0; 
+    margin: 0; 
+    color: inherit;  
+    font-size: 1.38316rem;
+    font-weight: 700; 
+    text-rendering: optimizeLegibility; 
+    line-height: 1.1;
+} 
+
+h4 { 
+    padding: 0; 
+    margin: 0; 
+    color: inherit; 
+    font-weight: 700; 
+    text-rendering: optimizeLegibility; 
+    line-height: 1.1;
+    font-size: 1rem;
+} 
+
+h5 { 
+    font-size: .85028rem;
+    padding: 0; 
+    margin: 0; 
+    color: inherit; 
+    font-weight: 700; 
+    text-rendering: optimizeLegibility; 
+    line-height: 1.1;
+} 
+
+
+*/
+
+
+
+
+main { 
+    display: block;
+    position: relative;
+    text-decoration: none;
+} 
+
+
+
+
+
+
+
+
+/* 
+
+.love-to-do { 
+    padding-right: 100px; 
+    display: flex; 
+    flex-wrap: wrap;
+} 
+
+.love-to-do .stickpad  { 
+    background-color: #1d293a; 
+    padding: 45px 25px; 
+    margin: 0 15px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    border-radius: 4px;
+} 
+
+.love-to-do > :first-of-type  { 
+    margin-left: 0;
+} 
+
+.love-to-do > :last-of-type  { 
+    margin-right: 0;
+} 
+
+.love-to-do > *  { 
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: calc(25% - 30px);
+} 
+
+.love-to-do .stickpad img  { 
+    display: inline-block; 
+    width: 65px; 
+    margin-bottom: 15px;
+} 
+
+.love-to-do .stickpad h4  { 
+    font-weight: 900; 
+    color: hsla(0,0%,100%,.85); 
+    font-size: 22px;
+}  */
+
+
+
+
+
+
+/* .footer { 
+    align-items: center; 
+    justify-content: space-between;
+    display: flex; 
+    flex-wrap: wrap;
+    display: block;
+} 
+
+.footer-area { 
+    background-color: #1d293a;
+} 
+
+.footer .copyright  { 
+    display: flex; 
+    align-items: center;
+} 
+
+.footer .language ul li  { 
+    position: relative; 
+    background-color: #111a28; 
+    margin-right: 15px; 
+    padding: 3px 10px; 
+    font-weight: 900; 
+    border-radius: 4px;
+} 
+
+.footer .copyright .github li  { 
+    margin-left: 5px;
+} 
+
+.footer .language ul  { 
+    display: flex; 
+    flex-wrap: wrap;
+} 
+
+.footer .copyright .github  { 
+    display: flex; 
+    margin-right: 15px;
+} 
+
+.footer .copyright p  { 
+    text-transform: uppercase; 
+    font-weight: 900;
+} 
+
+
+.footer .copyright p span  { 
+    display: inline-block; 
+    cursor: pointer; 
+    margin-left: 15px; 
+    background-color: #00cf5d; 
+    padding: 2px 5px; 
+    border-radius: 4px;
+} 
+.footer .language ul li p  { 
+    margin-bottom: 3px; 
+    text-transform: uppercase;
+} 
+
+.footer .language ul li .progress  { 
+    position: absolute; 
+    content: ""; 
+    left: 0; 
+    background-color: #00cf5d; 
+    height: 3px; 
+    width: 100%; 
+    bottom: 0; 
+    border-radius: 4px;
+} 
+
+.footer .copyright .github li a  { 
+    text-decoration: none;
+} 
+
+.footer .copyright .github li a p  { 
+    font-weight: 300; 
+    font-size: 14px;
+} 
+
+
+
+
+
+
+
+
+
+.contact { 
+    display: flex; 
+    flex-wrap: wrap; 
+    padding-right: 100px;
+} 
+
+.contact > *  { 
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: calc(50% - 30px);
+} 
+
+.contact > :first-of-type  { 
+    margin-right: 15px;
+} 
+
+.contact > :last-of-type  { 
+    margin-left: 15px;
+} 
+
+a { 
+    background-color: transparent; 
+    -webkit-text-decoration-skip: objects;
+} 
+
+li :last-child  { 
+    margin-bottom: 0;
+} 
+
+a:active,a:hover { 
+    outline-width: 0;
+} 
+
+img { 
+    border-style: none;
+    max-width: 100%; 
+    padding: 0; 
+    margin: 0;
+} 
+
+.contact-status p  { 
+    line-height: 2;
+} 
+
+p :last-child  { 
+    margin-bottom: 0;
+} 
+
+svg:not(:root) { 
+    overflow: hidden;
+} 
+
+.contact-details li  { 
+    margin-bottom: 15px;
+} 
+
+li > p  { 
+    margin-bottom: .725rem;
+} 
+
+li :last-child ,p :last-child  { 
+    margin-bottom: 0;
+} 
+.contact-details h5  { 
+    font-size: 26px; 
+    font-weight: 900;
+} 
+.contact-details p span  { 
+    font-weight: 300; 
+    color: hsla(0,0%,100%,.65);
+}  */
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-oUEmH.style-oUEmH {  
+   color:rgba(255, 255, 255, 0.85);  
+   border-color:#00cf5d;  
+   background-color:#00cf5d;  
+}  
+#style-97KZA.style-97KZA {  
+   margin-left:15px;  
+   color:rgba(255, 255, 255, 0.85);  
+   border-color:#00cf5d;  
+   background-color:transparent;  
+}  
+#style-i93Re.style-i93Re {  
+   color:rgba(255, 255, 255, 0.85);  
+   border-color:#00cf5d;  
+   background-color:#00cf5d;  
+}  
+
+#style-7m3og.style-7m3og {  
+   margin-top:15px;  
+   color:rgba(255, 255, 255, 0.85);  
+   border-color:#00cf5d;  
+   background-color:transparent;  
+}  
+#style-A8MmG.style-A8MmG {  
+   margin-top:25px;  
+   color:#fff;  
+   border-color:#00cf5d;  
+   background-color:#00cf5d;  
+}  
