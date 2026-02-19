@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Arduino Bootcamp",
+    "platform": "LinkedIn Learning",
+    "icon": "/icons/linkedin-learning.svg",
+    "date": "2023",
+    "link": "https://www.linkedin.com/learning/"
+  },
+  {
+    "title": "Embedded Systems Essentials",
+    "platform": "Coursera",
+    "icon": "/icons/coursera.svg",
+    "date": "2024",
+    "link": "https://www.coursera.org/"
+  },
+  {
+    "title": "Control Systems with MATLAB/Simulink",
+    "platform": "Udemy",
+    "icon": "/icons/udemy.svg",
+    "date": "2024",
+    "link": "https://www.udemy.com/"
+  },
+  {
+    "title": "Project Management Fundamentals",
+    "platform": "LinkedIn Learning",
+    "icon": "/icons/linkedin.svg",
+    "date": "2025",
+    "link": "https://www.linkedin.com/learning/"
+  }
+]

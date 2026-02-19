@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Arduino",
+    "path": "/certificates/arduino.pdf",
+    "provider": "LinkedIn Learning",
+    "focus": "Embedded programming foundations, microcontroller I/O, sensor integration, and prototyping practice.",
+    "skillsGained": [
+      "Digital and analog input/output interfacing",
+      "Sensor integration workflow",
+      "Embedded debugging and iterative prototyping"
+    ],
+    "achievement": "Applied the core Arduino workflow directly in multiple hardware prototypes including MediTracker.",
+    "appliedInProjects": ["MediTracker", "Smart Miner Helmet logic prototypes"]
+  },
+  {
+    "title": "C-BVA",
+    "path": "/certificates/c-bva.pdf",
+    "provider": "Professional Testing Program",
+    "focus": "Boundary value analysis and structured software test design techniques.",
+    "skillsGained": [
+      "Test-case boundary design",
+      "Validation strategy for edge conditions",
+      "Quality-first development discipline"
+    ],
+    "achievement": "Strengthened validation discipline for software modules and control logic behavior.",
+    "appliedInProjects": ["Telegram Bot", "Sign Language Recognition"]
+  },
+  {
+    "title": "Embedded",
+    "path": "/certificates/embedded.pdf",
+    "provider": "Embedded Systems Training Program",
+    "focus": "Embedded architecture, firmware flow, hardware-software interfacing, and real-time constraints.",
+    "skillsGained": [
+      "Firmware architecture planning",
+      "Hardware-software interface design",
+      "Real-time behavior reasoning"
+    ],
+    "achievement": "Improved end-to-end embedded design capability from sensor input to reliable control output.",
+    "appliedInProjects": ["MediTracker", "Smart Miner Helmet safety logic"]
+  },
+  {
+    "title": "Project Management",
+    "path": "/certificates/project-management.pdf",
+    "provider": "Professional Development Program",
+    "focus": "Planning, execution control, risk tracking, and delivery governance.",
+    "skillsGained": [
+      "Milestone planning and execution tracking",
+      "Risk identification and mitigation",
+      "Scope and delivery management"
+    ],
+    "achievement": "Applied project structuring methods to keep engineering builds predictable and milestone-driven.",
+    "appliedInProjects": ["MediTracker", "CityLight IQ", "Fountain Nozzle"]
+  },
+  {
+    "title": "SolidWorks",
+    "path": "/certificates/solidworks.pdf",
+    "provider": "SolidWorks Training Program",
+    "focus": "Parametric CAD modeling, assemblies, technical drawings, and design refinement.",
+    "skillsGained": [
+      "Part and assembly modeling",
+      "Tolerance-aware CAD refinement",
+      "Engineering drawing preparation"
+    ],
+    "achievement": "Directly used in mechanical design and iteration of MediTracker and Fountain Nozzle models.",
+    "appliedInProjects": ["MediTracker", "Fountain Nozzle", "3D Printing Projects"]
+  }
+]

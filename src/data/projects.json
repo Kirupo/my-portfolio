@@ -1,0 +1,367 @@
+[
+  {
+    "title": "Sign Language Recognition",
+    "slug": "sign-language",
+    "description": "Real-time computer vision system using MediaPipe to interpret hand gestures, arm positioning, and facial expressions, converting them into text.",
+    "techStack": ["Python", "MediaPipe", "OpenCV"],
+    "images": ["/images/sign.jpg"],
+    "contributionNote": "Solo project - end-to-end development.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Build a recognition pipeline that can continuously read expressive sign movements and output structured text with low latency.",
+    "designIntent": "Create an accessibility-focused interface that can understand combined hand, arm, and facial cues instead of isolated finger shapes.",
+    "architecture": "Camera frames are captured through OpenCV, landmarks are extracted by MediaPipe, and a gesture-state interpreter maps temporal motion patterns to language tokens.",
+    "systemUsed": "Python processing pipeline, OpenCV video capture and preprocessing, MediaPipe landmarks, and rule-based gesture interpretation.",
+    "stackRationale": [
+      "Python enabled rapid prototyping and iteration of vision algorithms.",
+      "OpenCV provided stable camera stream handling and frame preprocessing.",
+      "MediaPipe gave robust real-time body/hand landmark extraction without heavy custom training overhead."
+    ],
+    "buildProcess": [
+      "Calibrated camera framing and normalized frame input under different lighting conditions.",
+      "Extracted hand, face, and upper-body landmarks and transformed them into consistent feature vectors.",
+      "Implemented gesture-state logic to map motion + posture combinations to text tokens.",
+      "Built confidence checks and temporal smoothing to reduce jitter in live predictions."
+    ],
+    "howItWorks": [
+      "Camera stream is captured frame-by-frame and cleaned before landmark extraction.",
+      "Landmark coordinates are analyzed for relative distances, orientation, and movement direction.",
+      "The interpretation engine validates gesture context over time, then emits structured text output."
+    ],
+    "imageInsights": [
+      "Primary capture frame used to validate landmark quality, gesture boundaries, and real-time output consistency."
+    ],
+    "challengesAndFixes": [
+      "Challenge: unstable predictions in fast motion. Fix: temporal smoothing and confidence thresholds.",
+      "Challenge: variable lighting. Fix: frame normalization and stabilized detection region configuration."
+    ],
+    "impact": "Demonstrated practical real-time accessibility support while proving strong capability in computer vision system integration."
+  },
+  {
+    "title": "3D Interactive Anatomy",
+    "slug": "3d-anatomy",
+    "description": "Web-based 3D anatomy explorer with gender toggle and expandable structure navigation.",
+    "techStack": ["React", "Three.js", "Tailwind"],
+    "images": ["/images/anatomy.jpg"],
+    "contributionNote": "Designed modular UI flow and 3D interaction behavior.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Create an intuitive browser-based anatomy explorer where non-technical users can inspect complex structures clearly.",
+    "designIntent": "Prioritize discoverability and orientation in 3D scenes so users can study structures without getting lost.",
+    "architecture": "React manages interface state and controls, while Three.js renders the anatomy scene and responds to UI-driven selection events.",
+    "systemUsed": "React component architecture, Three.js scene management, and Tailwind UI system for responsive layout and controls.",
+    "stackRationale": [
+      "React enabled predictable component state for filters, toggles, and anatomy info panels.",
+      "Three.js handled real-time 3D rendering and camera interaction efficiently in-browser.",
+      "Tailwind accelerated consistent responsive styling for dense interactive controls."
+    ],
+    "buildProcess": [
+      "Structured the app into reusable modules for model controls, info panels, and view modes.",
+      "Built a model navigation tree for progressive disclosure of body systems.",
+      "Implemented smooth camera movement and selection feedback to improve orientation in 3D space."
+    ],
+    "howItWorks": [
+      "User selections trigger model visibility and focus updates in the Three.js scene.",
+      "UI state controls system filtering, gender switch, and annotated detail overlays.",
+      "The explorer preserves context so users can move between regions without losing orientation."
+    ],
+    "imageInsights": [
+      "Scene preview demonstrates the layered UI + 3D model integration where users drill down anatomy structures interactively."
+    ],
+    "challengesAndFixes": [
+      "Challenge: complex scene navigation for new users. Fix: hierarchical structure panel and focused camera transitions.",
+      "Challenge: UI clutter. Fix: progressive disclosure and modular panel toggles."
+    ],
+    "impact": "Turned complex anatomical visualization into a usable learning interface that balances detail and simplicity."
+  },
+  {
+    "title": "Baymax",
+    "slug": "baymax",
+    "description": "Human-centered emotional tracking system for mood logging and support interaction.",
+    "techStack": ["React Native", "Node.js"],
+    "images": ["/images/baymax.jpg"],
+    "contributionNote": "Focused on experience flow and reliable mood-event recording logic.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Design a lightweight emotional check-in assistant that encourages consistent user reflection and support prompts.",
+    "designIntent": "Keep emotional logging frictionless while preserving enough context for meaningful trend analysis.",
+    "architecture": "React Native handles mobile interaction and timeline views; Node.js service logic organizes mood events and response trigger rules.",
+    "systemUsed": "React Native front-end for mobile interaction and Node.js logic for structured mood event processing.",
+    "stackRationale": [
+      "React Native allowed quick cross-platform interface development.",
+      "Node.js simplified event-driven processing and lightweight API behavior.",
+      "Structured event schemas enabled trend grouping and prompt generation."
+    ],
+    "buildProcess": [
+      "Designed mood input patterns that reduce friction and increase daily usage consistency.",
+      "Implemented event tagging and timeline grouping for trend visibility.",
+      "Defined support interaction rules to trigger contextual responses."
+    ],
+    "howItWorks": [
+      "Users submit mood states with optional context and trigger tags.",
+      "Entries are grouped into trend views for review and reflection.",
+      "Interaction logic surfaces response prompts based on recent emotional patterns."
+    ],
+    "imageInsights": [
+      "Interface sample shows the core mood-check-in flow and support response interaction model."
+    ],
+    "challengesAndFixes": [
+      "Challenge: user drop-off in repeated logging. Fix: simplified input path and short guided options.",
+      "Challenge: noisy trend interpretation. Fix: normalized event tags and grouped timeline logic."
+    ],
+    "impact": "Delivered a clean emotional logging system that demonstrates product thinking plus full-stack implementation discipline."
+  },
+  {
+    "title": "Telegram Bot",
+    "slug": "telegram-bot",
+    "description": "Automation bot with event-driven command routing and real-time response handling.",
+    "techStack": ["Python", "Telegram API"],
+    "images": ["/images/bot.jpg"],
+    "contributionNote": "Built routing logic, command handlers, and reliable response patterns.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Automate repetitive chat workflows with predictable command behavior and low response latency.",
+    "designIntent": "Design a resilient command system that remains easy to expand while preserving deterministic responses.",
+    "architecture": "Incoming Telegram updates are parsed by a command router, mapped to handlers, and executed through modular service functions.",
+    "systemUsed": "Python command engine and Telegram Bot API webhook/polling event handling.",
+    "stackRationale": [
+      "Python allowed fast handler creation and integration with external utilities.",
+      "Telegram API provided clear event contracts for command-driven workflows.",
+      "Modular handler design improved maintainability and easier feature extension."
+    ],
+    "buildProcess": [
+      "Defined command map and argument parsing strategy.",
+      "Implemented handler pipeline with error-safe fallbacks.",
+      "Added contextual responses for improved user interaction quality."
+    ],
+    "howItWorks": [
+      "Incoming messages are classified into command patterns.",
+      "Mapped handlers execute requested actions and compose response payloads.",
+      "System returns results in real time and logs invalid command paths for refinement."
+    ],
+    "imageInsights": [
+      "Bot preview highlights command-response orchestration and automated interaction behavior."
+    ],
+    "challengesAndFixes": [
+      "Challenge: malformed user inputs. Fix: stricter argument parsing and fallback help responses.",
+      "Challenge: handler growth complexity. Fix: modular routing table and isolated command modules."
+    ],
+    "impact": "Reduced manual workflow overhead while proving event-driven backend logic and API integration capability."
+  },
+  {
+    "title": "MediTracker",
+    "slug": "meditracker",
+    "description": "Embedded monitoring system with Arduino, housed in a custom 3D-printed enclosure. Designed through iterative prototyping.",
+    "techStack": ["Arduino", "C++", "3D Printing", "SolidWorks"],
+    "images": [
+      "/images/meditracker/1.jpg",
+      "/images/meditracker/2.jpg",
+      "/images/meditracker/3.jpg",
+      "/images/meditracker/4.jpg",
+      "/images/meditracker/5.jpg",
+      "/images/meditracker/design.png",
+      "/images/meditracker/photo-1.jpg",
+      "/images/meditracker/photo-2.jpg"
+    ],
+    "contributionNote": "Solo hardware and software integration from concept to physical prototype.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Build a portable embedded monitoring platform that is mechanically robust, serviceable, and manufacturable with local prototyping resources.",
+    "designIntent": "Integrate electronics and enclosure design as one system so physical constraints, serviceability, and firmware requirements align.",
+    "architecture": "SolidWorks models define enclosure geometry and mounting points; Arduino firmware controls sensing/logic; iterative print-test loops close the hardware validation cycle.",
+    "systemUsed": "SolidWorks for enclosure design, Arduino firmware in C++, iterative FDM 3D printing for fit/function validation.",
+    "stackRationale": [
+      "SolidWorks provided precise parametric control for enclosure tolerances and internal component alignment.",
+      "Arduino offered a practical embedded platform for fast integration and hardware debugging.",
+      "3D printing enabled rapid prototype iteration to validate design decisions physically."
+    ],
+    "buildProcess": [
+      "Designed initial enclosure and internal mounting strategy in SolidWorks.",
+      "Printed test bodies, validated board fit, cable routing, and airflow.",
+      "Reworked geometry and tolerances after real assembly feedback.",
+      "Finalized firmware + enclosure pair for practical integrated operation."
+    ],
+    "howItWorks": [
+      "Sensor and control hardware interface through an Arduino core running custom embedded logic.",
+      "Enclosure layout protects electronics while enabling access to key service points.",
+      "The final model balances structural protection, usability, and manufacturability."
+    ],
+    "imageInsights": [
+      "Initial physical prototype used to validate overall enclosure volume and board fit.",
+      "Second iteration showing structural refinement around component access points.",
+      "Third revision focused on mounting alignment and cable routing stability.",
+      "Fourth revision with improved enclosure ergonomics and assembly practicality.",
+      "Expanded design view demonstrating updated modeling decisions before print.",
+      "Final SolidWorks drawing (PNG) used to communicate precise geometry before fabrication.",
+      "Integrated two-part assembly view highlighting fit between major enclosure segments.",
+      "Alternate integrated view confirming final assembly relationship and tolerance intent."
+    ],
+    "challengesAndFixes": [
+      "Challenge: board mounting and connector clearance conflicts. Fix: redesigned internal bosses and routing channels.",
+      "Challenge: enclosure tolerance mismatch after print. Fix: adjusted CAD offsets and repeated fit-verification cycles.",
+      "Challenge: assembly serviceability. Fix: reworked cover split and fastening access geometry."
+    ],
+    "impact": "Demonstrates full-cycle electromechanical execution: CAD modeling, rapid iteration, firmware integration, and physical validation."
+  },
+  {
+    "title": "3D Printing Projects",
+    "slug": "3d-print",
+    "description": "Custom mechanical components designed and printed for embedded systems, including MediTracker and Smart Miner Helmet.",
+    "techStack": ["SolidWorks", "Fusion 360", "PrusaSlicer"],
+    "images": [
+      "/images/3d-print/1.jpg",
+      "/images/3d-print/2.jpg",
+      "/images/3d-print/3.jpg",
+      "/images/3d-print/4.jpg"
+    ],
+    "contributionNote": "Owned mechanical design, print preparation, and assembly-fit optimization.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Produce functional mechanical parts that align with electronics constraints, assembly realities, and rapid iteration timelines.",
+    "designIntent": "Reduce prototype turnaround time while maintaining mechanical integrity and fit quality for embedded applications.",
+    "architecture": "CAD models are parameterized, exported for slicing, printed for fit validation, then revised based on tolerance and assembly results.",
+    "systemUsed": "SolidWorks/Fusion 360 CAD workflow with slicer tuning for wall thickness, supports, and print reliability.",
+    "stackRationale": [
+      "SolidWorks and Fusion 360 supported both structured engineering geometry and quick concept variants.",
+      "PrusaSlicer tuning enabled repeatable prints with better strength-to-weight balance.",
+      "Iterative prototyping allowed rapid correction of mechanical-electrical integration issues."
+    ],
+    "buildProcess": [
+      "Modeled components around sensor placement and board envelope constraints.",
+      "Tuned print settings for strength-to-weight balance and repeatability.",
+      "Validated each revision by physical fit checks and integration tests."
+    ],
+    "howItWorks": [
+      "CAD models are exported into print-ready formats with tuned slicing parameters.",
+      "Parts are fabricated, tested with target systems, and revised based on tolerance/performance data.",
+      "Final versions are selected for integration into embedded prototypes."
+    ],
+    "imageInsights": [
+      "Printed component variant used for early form and fit exploration.",
+      "Revised geometry with manufacturing-oriented adjustments.",
+      "Functional print focused on assembly compatibility.",
+      "Finalized part version selected for practical integration."
+    ],
+    "challengesAndFixes": [
+      "Challenge: weak sections in load-bearing zones. Fix: increased local wall thickness and adjusted infill strategy.",
+      "Challenge: mating-part tolerance drift. Fix: calibration parts and iterative dimension correction."
+    ],
+    "impact": "Enabled faster hardware iteration loops and stronger integration quality across multiple embedded builds."
+  },
+  {
+    "title": "CityLight IQ (LabVIEW)",
+    "slug": "citylight-iq",
+    "description": "LabVIEW simulation with block diagram architecture, ambient light modeling, and adaptive LED brightness scaling.",
+    "techStack": ["LabVIEW"],
+    "images": [],
+    "contributionNote": "Solo project.",
+    "hasCertificate": true,
+    "certificatePath": "/certificates/project-management.pdf",
+    "problemStatement": "Simulate adaptive street-light behavior that responds intelligently to environmental light changes.",
+    "designIntent": "Model a responsive lighting controller where behavior is transparent, testable, and easy to tune.",
+    "architecture": "Ambient input simulation feeds event-driven LabVIEW logic that maps conditions to discrete brightness output states.",
+    "systemUsed": "LabVIEW block-diagram programming with sensor-input simulation and LED output logic.",
+    "stackRationale": [
+      "LabVIEW provided clear visual control-flow representation for rapid simulation iteration.",
+      "Event structures enabled reactive behavior modeling for changing environmental input.",
+      "Block-diagram approach made logic validation and tuning straightforward."
+    ],
+    "buildProcess": [
+      "Defined operating states and threshold rules for LED scaling.",
+      "Implemented event-driven control structure in LabVIEW blocks.",
+      "Validated transitions for smooth brightness adaptation behavior."
+    ],
+    "howItWorks": [
+      "Simulated ambient input is sampled and compared against calibrated thresholds.",
+      "Control logic selects one of multiple brightness states for LED outputs.",
+      "Event-handling structure updates outputs dynamically as conditions change."
+    ],
+    "imageInsights": [],
+    "challengesAndFixes": [
+      "Challenge: unstable threshold switching. Fix: tuned transition conditions and hysteresis behavior.",
+      "Challenge: readability of control logic at scale. Fix: modularized block sections by function."
+    ],
+    "impact": "Showcases control-logic thinking and simulation-first validation for smart infrastructure use cases."
+  },
+  {
+    "title": "Magnetic Levitation System",
+    "slug": "maglev",
+    "description": "Dynamic modeling and control system in MATLAB & Simulink.",
+    "techStack": ["MATLAB", "Simulink"],
+    "images": [],
+    "contributionNote": "Group project - Designed compensator and implemented control model in Simulink.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Stabilize an inherently unstable magnetic levitation plant through model-based control design.",
+    "designIntent": "Achieve stable levitation with acceptable transient behavior while respecting system response constraints.",
+    "architecture": "Plant dynamics are modeled in MATLAB and closed-loop behavior is implemented in Simulink with a compensator shaping loop response.",
+    "systemUsed": "MATLAB system analysis and Simulink closed-loop model implementation.",
+    "stackRationale": [
+      "MATLAB offered robust control analysis tools for pole/response characterization.",
+      "Simulink enabled clear visual validation of closed-loop system behavior over time.",
+      "Combined workflow accelerated compensator tuning and verification cycles."
+    ],
+    "buildProcess": [
+      "Developed linearized plant representation and response analysis.",
+      "Designed compensator to satisfy stability and transient-response requirements.",
+      "Implemented and tested closed-loop behavior in Simulink."
+    ],
+    "howItWorks": [
+      "Plant model receives setpoint and disturbance conditions.",
+      "Compensator shapes loop dynamics for stable levitation response.",
+      "Simulink validates settling behavior, overshoot limits, and robustness trends."
+    ],
+    "imageInsights": [],
+    "challengesAndFixes": [
+      "Challenge: oscillatory response. Fix: compensator retuning and stability-margin checks.",
+      "Challenge: balancing speed vs stability. Fix: iterative parameter sweeps in Simulink."
+    ],
+    "impact": "Demonstrates control-systems competence and practical contribution in collaborative engineering projects."
+  },
+  {
+    "title": "Fountain Nozzle",
+    "slug": "fountain-nozzle",
+    "description": "Mechanical nozzle design study with multiple output concepts modeled in SolidWorks and compared for manufacturability and flow behavior intent.",
+    "techStack": ["SolidWorks", "Mechanical Design", "Design Iteration"],
+    "images": [
+      "/images/fountain-nozzle/1.jpg",
+      "/images/fountain-nozzle/assembly-dagi.jpg",
+      "/images/fountain-nozzle/assembly-multi.jpg",
+      "/images/fountain-nozzle/straight-jet-nozzle.jpg"
+    ],
+    "contributionNote": "Concept-to-CAD workflow with variant design exploration.",
+    "hasCertificate": false,
+    "certificatePath": "",
+    "problemStatement": "Develop nozzle concepts with different spray behavior objectives while maintaining practical geometry for production-ready mechanical modeling.",
+    "designIntent": "Convert conceptual fountain ideas into structured CAD variants that can be analyzed for geometry quality, assembly logic, and manufacturability.",
+    "architecture": "Concept reference is translated into part features, then assembled into nozzle variants to compare directional behavior and integration constraints.",
+    "systemUsed": "SolidWorks part and assembly modeling workflow with iterative dimensional refinement.",
+    "stackRationale": [
+      "SolidWorks provided strong assembly tools for multi-part nozzle configuration studies.",
+      "Parametric modeling enabled rapid variation of outlet geometry and internal paths.",
+      "Iterative CAD allowed controlled exploration of form/function tradeoffs."
+    ],
+    "buildProcess": [
+      "Image 1 captures initial concept inspiration and geometric intent.",
+      "Converted concept into baseline nozzle architecture in SolidWorks.",
+      "Designed multiple variants to compare directional flow behavior and structural form.",
+      "Prepared assembly-focused models for downstream fabrication readiness."
+    ],
+    "howItWorks": [
+      "Each nozzle geometry changes outlet path and therefore expected jet pattern behavior.",
+      "Assembly models define alignment and integration constraints for supporting components.",
+      "Design variants are evaluated for feasibility, complexity, and target visual/flow objective."
+    ],
+    "imageInsights": [
+      "Image 1 records the original inspiration concept that guided geometry direction.",
+      "Assembly-dagi model demonstrates one nozzle architecture and its structural logic.",
+      "Assembly-multi model presents a multi-output configuration for broader spray behavior.",
+      "Straight-jet nozzle model focuses on directed flow with cleaner outlet geometry."
+    ],
+    "challengesAndFixes": [
+      "Challenge: preserving concept aesthetics while keeping model manufacturable. Fix: balanced feature simplification with key visual intent.",
+      "Challenge: variant comparison complexity. Fix: standardized parameter baselines across design versions."
+    ],
+    "impact": "Shows CAD depth, concept translation skill, and mechanical variant reasoning for product-oriented design work."
+  }
+]
