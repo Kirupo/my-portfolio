@@ -12,14 +12,11 @@ function Projects({ projects, onOpenProject }) {
           transition={{ duration: 0.55 }}
           className="mb-10"
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-muted">Selected Projects</p>
-          <h2 className="mt-3 font-display text-3xl sm:text-5xl">CASE STUDIES IN REAL SYSTEM BUILDING</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">Projects</p>
+          <h2 className="mt-3 font-display text-3xl sm:text-5xl">Engineering Case Studies</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted sm:text-base">
-            These projects show end-to-end capability: requirements, simulation, prototyping, implementation, and
-            practical integration.
-          </p>
-          <p className="mt-2 text-xs uppercase tracking-[0.18em] text-accent">
-            Click any project card to open full images and detailed engineering explanation.
+            End-to-end projects spanning computer vision, embedded systems, control engineering, and mechanical
+            prototyping.
           </p>
         </motion.div>
 

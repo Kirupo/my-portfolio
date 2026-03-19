@@ -9,7 +9,7 @@ function ImageCarousel({ images, title }) {
 
   return (
     <div className="w-full">
-      <div className="relative overflow-hidden rounded-3xl border border-white/10">
+      <div className="relative overflow-hidden rounded-2xl border border-white/10">
         <motion.img
           key={images[index]}
           src={images[index]}
@@ -18,7 +18,7 @@ function ImageCarousel({ images, title }) {
           initial={{ opacity: 0, x: 14 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.25 }}
-          className="h-[46vh] min-h-[260px] w-full bg-black/25 object-contain p-2"
+          className="h-[42vh] min-h-[240px] w-full bg-black/20 object-contain p-2"
         />
 
         <button

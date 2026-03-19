@@ -16,8 +16,8 @@ export default {
         accentSecondary: "var(--accent-secondary)",
       },
       boxShadow: {
-        glow: "0 0 20px rgba(57, 255, 20, 0.35)",
-        soft: "0 20px 45px rgba(0, 0, 0, 0.2)",
+        glow: "var(--glow-shadow)",
+        soft: "var(--soft-shadow)",
       },
     },
   },

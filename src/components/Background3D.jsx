@@ -9,13 +9,13 @@ const createGradientTexture = (theme) => {
   const gradient = ctx.createLinearGradient(0, 0, 512, 512);
 
   if (theme === "dark") {
-    gradient.addColorStop(0, "rgba(36,45,94,0.55)");
-    gradient.addColorStop(0.5, "rgba(78,33,140,0.5)");
-    gradient.addColorStop(1, "rgba(11,15,26,0.55)");
+    gradient.addColorStop(0, "rgba(30,41,78,0.42)");
+    gradient.addColorStop(0.5, "rgba(88,36,138,0.34)");
+    gradient.addColorStop(1, "rgba(11,15,26,0.4)");
   } else {
-    gradient.addColorStop(0, "rgba(59,130,246,0.3)");
-    gradient.addColorStop(0.5, "rgba(139,92,246,0.25)");
-    gradient.addColorStop(1, "rgba(244,246,248,0.2)");
+    gradient.addColorStop(0, "rgba(147,197,253,0.26)");
+    gradient.addColorStop(0.5, "rgba(196,181,253,0.2)");
+    gradient.addColorStop(1, "rgba(245,247,250,0.1)");
   }
 
   ctx.fillStyle = gradient;
@@ -40,12 +40,12 @@ function Background3D({ theme }) {
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
 
-    const geometry = new THREE.PlaneGeometry(22, 13, 42, 24);
+    const geometry = new THREE.PlaneGeometry(22, 13, 36, 20);
     const texture = createGradientTexture(theme);
     const material = new THREE.MeshBasicMaterial({
       map: texture,
       transparent: true,
-      opacity: theme === "dark" ? 0.18 : 0.12,
+      opacity: theme === "dark" ? 0.14 : 0.1,
       side: THREE.DoubleSide,
       depthWrite: false,
     });
@@ -60,11 +60,11 @@ function Background3D({ theme }) {
 
     const animate = () => {
       if (!reduceMotion) {
-        const t = performance.now() * 0.00016;
+        const t = performance.now() * 0.00012;
         for (let i = 0; i < vertices.count; i += 1) {
           const x = base[i * 3];
           const y = base[i * 3 + 1];
-          vertices.array[i * 3 + 2] = base[i * 3 + 2] + Math.sin(x * 0.5 + t) * 0.18 + Math.cos(y * 0.6 + t) * 0.08;
+          vertices.array[i * 3 + 2] = base[i * 3 + 2] + Math.sin(x * 0.45 + t) * 0.16 + Math.cos(y * 0.55 + t) * 0.07;
         }
         vertices.needsUpdate = true;
       }

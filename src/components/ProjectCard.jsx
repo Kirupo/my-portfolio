@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
 function ProjectCard({ project, onOpen }) {
-  const previewImage = project.images[0];
+  const previewImage = Array.isArray(project.images) && project.images.length > 0 ? project.images[0] : "";
+
   const handleOpen = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -10,8 +11,9 @@ function ProjectCard({ project, onOpen }) {
 
   return (
     <motion.article
-      whileHover={{ y: -8 }}
-      className="glass-card neon-border group h-full overflow-hidden rounded-3xl border border-white/10 shadow-soft"
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3 }}
+      className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-[var(--card-color)] shadow-soft backdrop-blur-xl transition duration-300 hover:shadow-glow"
     >
       <div className="flex h-full w-full flex-col text-left">
         {previewImage ? (
@@ -20,14 +22,14 @@ function ProjectCard({ project, onOpen }) {
               src={previewImage}
               alt={`${project.title} preview`}
               loading="lazy"
-              className="aspect-video w-full bg-black/20 object-contain p-1 transition duration-500 group-hover:scale-[1.02]"
+              className="aspect-video w-full bg-black/20 object-cover transition duration-500 group-hover:scale-105"
             />
           </button>
         ) : (
           <button
             type="button"
             onClick={handleOpen}
-            className="flex aspect-video items-center justify-center bg-gradient-to-br from-accent/20 to-accentSecondary/20 text-left"
+            className="flex aspect-video items-center justify-center bg-gradient-to-br from-accent/15 to-accentSecondary/15 text-left"
           >
             <span className="font-display text-sm uppercase tracking-[0.2em] text-muted">Project Overview</span>
           </button>
@@ -41,7 +43,7 @@ function ProjectCard({ project, onOpen }) {
 
           <div className="flex flex-wrap gap-2">
             {project.techStack.slice(0, 4).map((tech) => (
-              <span key={tech} className="rounded-full border border-accent/40 px-2.5 py-1 text-xs text-fg">
+              <span key={tech} className="rounded-full border border-accent/35 px-2.5 py-1 text-xs text-fg">
                 {tech}
               </span>
             ))}
@@ -50,9 +52,9 @@ function ProjectCard({ project, onOpen }) {
           <button
             type="button"
             onClick={handleOpen}
-            className="mt-auto inline-flex w-fit rounded-full border border-accent/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-accent transition hover:bg-accent/10"
+            className="mt-auto inline-flex w-fit rounded-full border border-accent/45 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-accent transition duration-300 hover:bg-accent/10"
           >
-            Open Case Study
+            View Details
           </button>
         </div>
       </div>

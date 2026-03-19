@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 
-function CertificateViewer({ certificate, onClose, theme }) {
+function CertificateViewer({ certificate, onClose, isDark }) {
   const layoutPlugin = useMemo(() => defaultLayoutPlugin(), []);
   const handleBackdropClick = (event) => {
     if (event.target === event.currentTarget) {
@@ -46,7 +46,7 @@ function CertificateViewer({ certificate, onClose, theme }) {
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-muted">Certificate Details</p>
                   <h3 className="mt-1 font-display text-xl">{certificate.title}</h3>
-                  <p className="mt-1 text-xs uppercase tracking-[0.14em] text-accent">{certificate.provider}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.14em] text-accent">{certificate.issuer}</p>
                 </div>
                 <div className="flex gap-2">
                   <a
@@ -67,51 +67,20 @@ function CertificateViewer({ certificate, onClose, theme }) {
                 </div>
               </div>
 
-              <div className="mt-3 grid gap-3 md:grid-cols-2">
-                <div className="rounded-xl border border-white/10 bg-black/15 p-3">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-accent">What It Covers</p>
-                  <p className="mt-2 text-sm text-muted">{certificate.focus}</p>
-                </div>
-                <div className="rounded-xl border border-white/10 bg-black/15 p-3">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-accent">My Achievement</p>
-                  <p className="mt-2 text-sm text-muted">{certificate.achievement}</p>
-                </div>
+              <div className="mt-3 rounded-xl border border-white/10 bg-black/15 p-3">
+                <p className="text-[11px] uppercase tracking-[0.15em] text-accent">Summary</p>
+                <p className="mt-2 text-sm text-muted">{certificate.summary}</p>
               </div>
-
-              {certificate.skillsGained && certificate.skillsGained.length > 0 ? (
-                <div className="mt-3 rounded-xl border border-white/10 bg-black/15 p-3">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-accent">Skills Demonstrated</p>
-                  <ul className="mt-2 space-y-1.5">
-                    {certificate.skillsGained.map((skill) => (
-                      <li key={skill} className="flex items-start gap-2 text-sm text-muted">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
-                        <span>{skill}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-
-              {certificate.appliedInProjects && certificate.appliedInProjects.length > 0 ? (
-                <div className="mt-3 rounded-xl border border-white/10 bg-black/15 p-3">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-accent">Applied In Projects</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {certificate.appliedInProjects.map((projectName) => (
-                      <span
-                        key={projectName}
-                        className="rounded-full border border-accent/40 px-3 py-1 text-xs text-muted"
-                      >
-                        {projectName}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
             </div>
 
             <div className="min-h-0 flex-1 overflow-hidden">
               <Worker workerUrl="/pdf.worker.min.js">
-                <Viewer fileUrl={certificate.path} theme={theme} plugins={[layoutPlugin]} defaultScale="PageFit" />
+                <Viewer
+                  fileUrl={certificate.path}
+                  theme={isDark ? "dark" : "light"}
+                  plugins={[layoutPlugin]}
+                  defaultScale="PageFit"
+                />
               </Worker>
             </div>
           </motion.div>

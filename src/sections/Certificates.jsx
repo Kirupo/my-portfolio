@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import CertificateCard from "../components/CertificateCard";
 
-function Certificates({ certificates, onOpenCertificate, theme }) {
+function Certificates({ certificates, onOpenCertificate }) {
   return (
     <section id="certificates" className="px-4 pb-20 pt-16 sm:pb-24 sm:pt-24">
       <div className="mx-auto max-w-6xl">
@@ -12,21 +12,16 @@ function Certificates({ certificates, onOpenCertificate, theme }) {
           transition={{ duration: 0.55 }}
           className="mb-10"
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-muted">Documents</p>
-          <h2 className="mt-3 font-display text-3xl sm:text-5xl">CERTIFICATES & VERIFIED TRAINING</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">Certificates</p>
+          <h2 className="mt-3 font-display text-3xl sm:text-5xl">Verified Training</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted sm:text-base">
-            Open each certificate in an embedded viewer or directly in a new tab.
+            Click any certificate card to open an embedded PDF viewer.
           </p>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certificates.map((certificate) => (
-            <CertificateCard
-              key={certificate.path}
-              certificate={certificate}
-              onOpen={onOpenCertificate}
-              theme={theme}
-            />
+            <CertificateCard key={certificate.path} certificate={certificate} onOpen={onOpenCertificate} />
           ))}
         </div>
       </div>
