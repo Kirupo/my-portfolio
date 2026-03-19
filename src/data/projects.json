@@ -5,7 +5,23 @@
     "description": "Real-time computer vision system using camera input to interpret gestures and generate structured output.",
     "techStack": ["Python", "MediaPipe", "OpenCV"],
     "images": ["/images/sign.jpg"],
-    "contributionNote": "Built the complete pipeline from camera capture to structured output generation."
+    "contributionNote": "Built the complete pipeline from camera capture to structured output generation.",
+    "caseStudy": {
+      "problem": "Create a low-latency system that can convert sign gestures into readable text in real time.",
+      "goal": "Improve communication accessibility through practical live gesture interpretation.",
+      "systemArchitecture": "Camera stream capture -> landmark extraction -> gesture interpretation engine -> text output layer.",
+      "toolsAndSoftware": ["Python", "MediaPipe", "OpenCV", "Rule-based gesture mapping"],
+      "workflow": [
+        "Normalized incoming frames for stable landmark detection.",
+        "Tracked hand and upper-body landmarks in real time.",
+        "Mapped landmark transitions to structured language tokens.",
+        "Added confidence filtering to reduce false predictions."
+      ],
+      "results": "Delivered stable gesture-to-text output in live tests with practical response speed.",
+      "imageNotes": [
+        "The project image shows the primary capture and analysis state used to validate detection consistency."
+      ]
+    }
   },
   {
     "title": "3D Anatomy",
@@ -13,7 +29,22 @@
     "description": "Interactive web-based anatomy platform with gender toggle and modular structure.",
     "techStack": ["React", "Three.js", "Tailwind CSS"],
     "images": ["/images/anatomy.jpg"],
-    "contributionNote": "Implemented modular UI architecture and interactive navigation logic."
+    "contributionNote": "Implemented modular UI architecture and interactive navigation logic.",
+    "caseStudy": {
+      "problem": "Users needed a clear way to explore complex anatomical structures in-browser without getting lost in 3D space.",
+      "goal": "Provide a structured learning experience that keeps detail high but navigation simple.",
+      "systemArchitecture": "React UI state controls scene filters and model groups rendered by Three.js.",
+      "toolsAndSoftware": ["React", "Three.js", "Tailwind CSS", "Component-driven UI architecture"],
+      "workflow": [
+        "Built modular panels for model categories and structure details.",
+        "Integrated interactive model controls and progressive reveal behavior.",
+        "Aligned camera interaction with UI state to preserve orientation context."
+      ],
+      "results": "Produced a responsive anatomy explorer with smooth interaction and clear user flow.",
+      "imageNotes": [
+        "The screenshot captures the integrated UI and 3D scene interaction model."
+      ]
+    }
   },
   {
     "title": "Baymax",
@@ -21,7 +52,22 @@
     "description": "Mental health tracking system focused on mood logging and user-centered interaction.",
     "techStack": ["React Native", "Node.js"],
     "images": ["/images/baymax.jpg"],
-    "contributionNote": "Designed the user flow for mood tracking and support-oriented interaction."
+    "contributionNote": "Designed the user flow for mood tracking and support-oriented interaction.",
+    "caseStudy": {
+      "problem": "Mood-tracking apps often lose users because repeated entry flows are too heavy.",
+      "goal": "Build a lightweight and empathetic interaction flow for daily mood check-ins.",
+      "systemArchitecture": "Mobile mood input and timeline UI connected to Node.js event logic.",
+      "toolsAndSoftware": ["React Native", "Node.js", "Event-driven interaction design"],
+      "workflow": [
+        "Designed low-friction daily logging screens.",
+        "Structured mood events for trend aggregation and review.",
+        "Connected response logic to recent emotional patterns."
+      ],
+      "results": "Created a practical emotional tracking prototype with consistent interaction behavior.",
+      "imageNotes": [
+        "The image represents the primary user flow where mood input and support prompts are combined."
+      ]
+    }
   },
   {
     "title": "Telegram Bot",
@@ -29,7 +75,22 @@
     "description": "Automation system with event-based command handling and real-time responses.",
     "techStack": ["Python", "Telegram API"],
     "images": ["/images/bot.jpg"],
-    "contributionNote": "Built command routing and stable real-time response handling."
+    "contributionNote": "Built command routing and stable real-time response handling.",
+    "caseStudy": {
+      "problem": "Manual handling of repetitive chat tasks was slow and error-prone.",
+      "goal": "Automate command workflows with predictable and fast responses.",
+      "systemArchitecture": "Incoming events are parsed by a command router and dispatched to modular handlers.",
+      "toolsAndSoftware": ["Python", "Telegram Bot API", "Command routing architecture"],
+      "workflow": [
+        "Defined a command map and standardized input parsing.",
+        "Implemented handler modules with fallback responses.",
+        "Added robust behavior for malformed or incomplete input."
+      ],
+      "results": "Reduced repetitive manual operations and improved response consistency.",
+      "imageNotes": [
+        "The project visual reflects the event-driven response behavior used in production tests."
+      ]
+    }
   },
   {
     "title": "MediTracker",
@@ -42,7 +103,26 @@
       "/images/meditracker/3.jpg",
       "/images/meditracker/4.jpg"
     ],
-    "contributionNote": "Designed and 3D printed the enclosure and integrated Arduino firmware with hardware."
+    "contributionNote": "Designed and 3D printed the enclosure and integrated Arduino firmware with hardware.",
+    "caseStudy": {
+      "problem": "Build an embedded monitor that is both technically reliable and physically manufacturable.",
+      "goal": "Integrate firmware, electronics, and enclosure design into one coherent prototype.",
+      "systemArchitecture": "SolidWorks enclosure design + Arduino control logic + iterative print-and-test hardware loop.",
+      "toolsAndSoftware": ["Arduino IDE", "C++", "SolidWorks", "FDM 3D printing workflow"],
+      "workflow": [
+        "Designed and revised enclosure geometry for board placement and wiring clearance.",
+        "Built firmware logic for sensing and control behavior.",
+        "Ran iterative fit checks and assembly tests across print revisions.",
+        "Finalized geometry and control logic for stable integrated operation."
+      ],
+      "results": "Delivered a full electromechanical prototype with validated fit, assembly, and embedded behavior.",
+      "imageNotes": [
+        "Image 1 shows early enclosure validation for volume and board fit.",
+        "Image 2 reflects revised structure for mounting and cable paths.",
+        "Image 3 highlights improved assembly geometry after tolerance correction.",
+        "Image 4 captures final integrated enclosure state."
+      ]
+    }
   },
   {
     "title": "3D Printing",
@@ -55,7 +135,25 @@
       "/images/3d-print/3.jpg",
       "/images/3d-print/4.jpg"
     ],
-    "contributionNote": "Produced functional parts for MediTracker and embedded prototypes through iterative print cycles."
+    "contributionNote": "Produced functional parts for MediTracker and embedded prototypes through iterative print cycles.",
+    "caseStudy": {
+      "problem": "Embedded prototypes needed custom mechanical parts with fast turnaround.",
+      "goal": "Create robust, fit-accurate printed components for real hardware integration.",
+      "systemArchitecture": "CAD modeling -> slicing configuration -> print -> fit validation -> design iteration.",
+      "toolsAndSoftware": ["SolidWorks", "Fusion 360", "PrusaSlicer"],
+      "workflow": [
+        "Modeled functional parts around electronic component constraints.",
+        "Tuned print parameters for strength and surface quality.",
+        "Validated each revision by physical fit and integration checks."
+      ],
+      "results": "Improved iteration speed and mechanical reliability across multiple builds.",
+      "imageNotes": [
+        "Image 1 shows concept-stage print geometry.",
+        "Image 2 captures refined geometry for manufacturability.",
+        "Image 3 highlights functional fit validation.",
+        "Image 4 shows final usable component revision."
+      ]
+    }
   },
   {
     "title": "CityLight IQ",
@@ -63,7 +161,19 @@
     "description": "LabVIEW-based adaptive lighting system using block diagram logic and LED brightness control.",
     "techStack": ["LabVIEW"],
     "images": [],
-    "contributionNote": "Implemented adaptive LED brightness logic and event-driven LabVIEW simulation blocks."
+    "contributionNote": "Implemented adaptive LED brightness logic and event-driven LabVIEW simulation blocks.",
+    "caseStudy": {
+      "problem": "Conventional lighting control lacks adaptive behavior for changing ambient conditions.",
+      "goal": "Simulate a practical adaptive lighting model that scales LED output by light input state.",
+      "systemArchitecture": "Ambient simulation input drives event-based LabVIEW block logic and multi-level LED control output.",
+      "toolsAndSoftware": ["LabVIEW", "Block diagram simulation", "Threshold logic design"],
+      "workflow": [
+        "Defined threshold states for ambient light ranges.",
+        "Built event-driven control logic in LabVIEW block diagrams.",
+        "Validated transition behavior across multiple simulated conditions."
+      ],
+      "results": "Created a stable adaptive control simulation with clear system behavior and predictable response."
+    }
   },
   {
     "title": "Magnetic Levitation",
@@ -71,6 +181,73 @@
     "description": "Control system designed in MATLAB & Simulink.",
     "techStack": ["MATLAB", "Simulink"],
     "images": [],
-    "contributionNote": "Group project - Designed compensator and control model."
+    "contributionNote": "Group project - Designed compensator and control model.",
+    "caseStudy": {
+      "problem": "Magnetic levitation dynamics are inherently unstable and require careful control design.",
+      "goal": "Stabilize the plant using compensator-based control in a model-driven workflow.",
+      "systemArchitecture": "Plant model analysis in MATLAB with closed-loop compensator simulation in Simulink.",
+      "toolsAndSoftware": ["MATLAB", "Simulink", "Control system analysis tools"],
+      "workflow": [
+        "Analyzed plant behavior and defined control targets.",
+        "Designed compensator to improve stability margins.",
+        "Implemented and validated closed-loop behavior in Simulink."
+      ],
+      "results": "Achieved stable simulated behavior and met key transient response expectations."
+    }
+  },
+  {
+    "title": "Fountain Nozzle",
+    "slug": "fountain-nozzle",
+    "description": "Mechanical nozzle design study with multiple SolidWorks variants for controlled flow patterns.",
+    "techStack": ["SolidWorks", "Mechanical Design", "Design Iteration"],
+    "images": [
+      "/images/fountain-nozzle/1.jpg",
+      "/images/fountain-nozzle/assembly-dagi.jpg",
+      "/images/fountain-nozzle/assembly-multi.jpg",
+      "/images/fountain-nozzle/straight-jet-nozzle.jpg"
+    ],
+    "contributionNote": "Translated concept inspiration into production-oriented CAD variants and assembly-ready models.",
+    "caseStudy": {
+      "problem": "Create nozzle geometries that can deliver different spray behaviors while remaining manufacturable.",
+      "goal": "Develop and compare multiple nozzle concepts through a structured CAD iteration process.",
+      "systemArchitecture": "Concept reference mapping -> part modeling -> assembly variants -> design comparison for manufacturability and flow intent.",
+      "toolsAndSoftware": ["SolidWorks", "Assembly modeling", "Parametric design workflow"],
+      "workflow": [
+        "Used concept reference to define initial geometry direction.",
+        "Built baseline nozzle architecture in SolidWorks.",
+        "Developed multiple assembly variants for different spray objectives.",
+        "Compared complexity, integration fit, and mechanical viability."
+      ],
+      "results": "Produced a clear multi-variant mechanical design set ready for downstream prototyping decisions.",
+      "imageNotes": [
+        "Image 1 is the original inspiration concept used to define geometry intent.",
+        "Assembly Dagi model shows one directional architecture with focused outlet behavior.",
+        "Assembly Multi model explores broader multi-output spray behavior.",
+        "Straight Jet model targets direct controlled flow through simplified outlet geometry."
+      ]
+    }
+  },
+  {
+    "title": "Smart Miner Helmet",
+    "slug": "smart-miner-helmet",
+    "description": "Embedded safety logic concept for miner protection using integrated sensor-driven alert behavior.",
+    "techStack": ["Arduino", "Embedded C/C++", "Safety Logic", "Hardware Integration"],
+    "images": [],
+    "contributionNote": "Designed embedded safety logic and integration strategy for practical field-oriented operation.",
+    "caseStudy": {
+      "problem": "Mining environments require rapid, reliable hazard detection and alert communication at the edge.",
+      "goal": "Design a portable embedded safety logic framework for early hazard signaling and operator awareness.",
+      "systemArchitecture": "Sensor input layer -> threshold and decision logic -> alert signaling outputs in real-time.",
+      "toolsAndSoftware": ["Arduino prototyping", "Embedded logic design", "Sensor integration workflow"],
+      "workflow": [
+        "Defined safety events and threshold-driven logic states.",
+        "Designed embedded decision flow for fast hazard classification.",
+        "Mapped alert outputs for immediate operator feedback."
+      ],
+      "results": "Established a practical safety-logic architecture that can be expanded into full hardware implementation.",
+      "imageNotes": [
+        "Project currently uses a structured placeholder panel until dedicated design images are uploaded."
+      ]
+    }
   }
 ]

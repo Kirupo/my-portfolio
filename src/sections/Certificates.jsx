@@ -15,7 +15,7 @@ function Certificates({ certificates, onOpenCertificate }) {
           <p className="text-xs uppercase tracking-[0.35em] text-muted">Certificates</p>
           <h2 className="mt-3 font-display text-3xl sm:text-5xl">Verified Training</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted sm:text-base">
-            Click any certificate card to open an embedded PDF viewer.
+            Click any certificate to review validation details, applied skills, and the original PDF.
           </p>
         </motion.div>
 

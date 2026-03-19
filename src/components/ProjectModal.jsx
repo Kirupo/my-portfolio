@@ -2,9 +2,33 @@ import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
 
+function DetailPanel({ title, content }) {
+  if (!content || (Array.isArray(content) && content.length === 0)) return null;
+
+  const isList = Array.isArray(content);
+  return (
+    <article className="rounded-2xl border border-white/10 bg-black/10 p-4">
+      <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{title}</h4>
+      {isList ? (
+        <ul className="mt-3 space-y-2.5">
+          {content.map((item) => (
+            <li key={item} className="flex items-start gap-2 text-sm text-muted">
+              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-3 text-sm leading-relaxed text-muted">{content}</p>
+      )}
+    </article>
+  );
+}
+
 function ProjectModal({ project, onClose }) {
   const images = Array.isArray(project?.images) ? project.images : [];
   const techStack = Array.isArray(project?.techStack) ? project.techStack : [];
+  const caseStudy = project?.caseStudy || {};
 
   const handleBackdropClick = (event) => {
     if (event.target === event.currentTarget) onClose();
@@ -57,7 +81,12 @@ function ProjectModal({ project, onClose }) {
             <div className="mb-6">
               {images.length === 0 ? (
                 <div className="flex h-[42vh] min-h-[220px] items-center justify-center rounded-2xl bg-gradient-to-br from-accent/15 to-accentSecondary/15">
-                  <p className="text-sm text-muted">No project images provided</p>
+                  <div className="max-w-md px-6 text-center">
+                    <p className="font-display text-sm uppercase tracking-[0.2em] text-fg">Visual Placeholder</p>
+                    <p className="mt-2 text-sm text-muted">
+                      Dedicated project visuals will be added here. Technical case study details are fully available.
+                    </p>
+                  </div>
                 </div>
               ) : images.length === 1 ? (
                 <img
@@ -71,12 +100,9 @@ function ProjectModal({ project, onClose }) {
               )}
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Description</h4>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{project.description}</p>
-            </div>
+            <DetailPanel title="Project Summary" content={project.description} />
 
-            <div className="mt-5">
+            <div className="mt-5 rounded-2xl border border-white/10 bg-black/10 p-4">
               <h4 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">Tech Stack</h4>
               <div className="flex flex-wrap gap-2">
                 {techStack.map((tech) => (
@@ -86,6 +112,17 @@ function ProjectModal({ project, onClose }) {
                 ))}
               </div>
             </div>
+
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+              <DetailPanel title="Problem" content={caseStudy.problem} />
+              <DetailPanel title="Goal" content={caseStudy.goal} />
+              <DetailPanel title="System Architecture" content={caseStudy.systemArchitecture} />
+              <DetailPanel title="Tools and Software" content={caseStudy.toolsAndSoftware} />
+              <DetailPanel title="Workflow" content={caseStudy.workflow} />
+              <DetailPanel title="Results" content={caseStudy.results} />
+            </div>
+
+            <DetailPanel title="Image Notes" content={caseStudy.imageNotes} />
 
             {project.contributionNote ? (
               <div className="mt-5 rounded-2xl border border-accent/30 bg-black/10 p-4">

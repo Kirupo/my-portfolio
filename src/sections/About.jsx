@@ -23,6 +23,8 @@ const contributions = [
   "Integrated Arduino into hardware prototypes.",
   "Designed compensator in MATLAB for magnetic levitation.",
   "Built LabVIEW block diagram logic for adaptive LED brightness.",
+  "Developed real-time sign language recognition workflow using computer vision.",
+  "Designed embedded safety logic architecture for Smart Miner Helmet.",
 ];
 
 function About() {

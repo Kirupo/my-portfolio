@@ -3,30 +3,65 @@
     "title": "Arduino",
     "path": "/certificates/arduino.pdf",
     "issuer": "LinkedIn Learning",
-    "summary": "Covers Arduino fundamentals, embedded prototyping, and practical hardware interfacing."
+    "issuedDate": "2023",
+    "whatItCovers": "Arduino fundamentals, digital and analog I/O, sensor interfacing, and prototyping workflow.",
+    "skillsValidated": [
+      "Microcontroller programming basics",
+      "Hardware interface debugging",
+      "Rapid prototyping with sensor modules"
+    ],
+    "appliedIn": ["MediTracker", "Smart Miner Helmet"]
   },
   {
     "title": "C-BVA",
     "path": "/certificates/c-bva.pdf",
     "issuer": "Professional Program",
-    "summary": "Focused on structured validation methods and boundary value analysis."
+    "issuedDate": "",
+    "whatItCovers": "Boundary value analysis and structured validation logic for software quality.",
+    "skillsValidated": [
+      "Edge-case identification",
+      "Structured test design",
+      "Quality-first implementation discipline"
+    ],
+    "appliedIn": ["Telegram Bot", "Sign Language Recognition"]
   },
   {
     "title": "Embedded",
     "path": "/certificates/embedded.pdf",
     "issuer": "Embedded Systems Training",
-    "summary": "Covers firmware structure, hardware-software integration, and real-time behavior."
+    "issuedDate": "2024",
+    "whatItCovers": "Embedded architecture, firmware control flow, and hardware-software integration practices.",
+    "skillsValidated": [
+      "Firmware structuring",
+      "Real-time logic planning",
+      "Embedded integration workflow"
+    ],
+    "appliedIn": ["MediTracker", "Smart Miner Helmet", "CityLight IQ"]
   },
   {
     "title": "Project Management",
     "path": "/certificates/project-management.pdf",
     "issuer": "Professional Development Program",
-    "summary": "Covers planning, risk tracking, and delivery discipline for technical projects."
+    "issuedDate": "2025",
+    "whatItCovers": "Project planning, milestone tracking, risk management, and execution control.",
+    "skillsValidated": [
+      "Execution planning",
+      "Milestone and risk tracking",
+      "Cross-functional delivery coordination"
+    ],
+    "appliedIn": ["MediTracker", "Fountain Nozzle", "Magnetic Levitation"]
   },
   {
     "title": "SolidWorks",
     "path": "/certificates/solidworks.pdf",
     "issuer": "SolidWorks Training Program",
-    "summary": "Covers parametric CAD modeling, assemblies, and engineering drawing workflows."
+    "issuedDate": "2024",
+    "whatItCovers": "Parametric CAD, assemblies, design refinement, and mechanical drawing workflow.",
+    "skillsValidated": [
+      "Part and assembly modeling",
+      "Design-for-manufacture refinement",
+      "Technical drawing communication"
+    ],
+    "appliedIn": ["MediTracker", "3D Printing", "Fountain Nozzle"]
   }
 ]

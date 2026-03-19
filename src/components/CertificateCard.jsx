@@ -16,7 +16,10 @@ function CertificateCard({ certificate, onOpen }) {
       <p className="mb-2 text-xs uppercase tracking-[0.22em] text-muted">Certificate</p>
       <h3 className="font-display text-xl">{certificate.title}</h3>
       <p className="mt-1 text-xs uppercase tracking-[0.14em] text-accent">{certificate.issuer}</p>
-      <p className="mt-3 text-sm text-muted">{certificate.summary}</p>
+      {certificate.issuedDate ? (
+        <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-muted">Issued {certificate.issuedDate}</p>
+      ) : null}
+      <p className="mt-3 text-sm text-muted">{certificate.whatItCovers}</p>
 
       <div className="mt-5 flex flex-wrap gap-2">
         <button

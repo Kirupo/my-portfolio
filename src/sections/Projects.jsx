@@ -18,6 +18,9 @@ function Projects({ projects, onOpenProject }) {
             End-to-end projects spanning computer vision, embedded systems, control engineering, and mechanical
             prototyping.
           </p>
+          <p className="mt-2 text-xs uppercase tracking-[0.18em] text-accent">
+            Open any project to see full system architecture, workflow, and outcomes.
+          </p>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">

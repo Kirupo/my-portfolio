@@ -1,0 +1,28 @@
+[
+  {
+    "role": "Electromechanical Engineering Intern",
+    "organization": "China Communications Construction Company Limited (CCCC)",
+    "location": "Addis Ababa, Ethiopia",
+    "startDate": "2025-06-11",
+    "endDate": "2025-08-11",
+    "summary": "Two-month summer internship focused on practical engineering coordination, field-oriented problem solving, and disciplined project execution.",
+    "highlights": [
+      "Supported multidisciplinary engineering coordination during active project stages.",
+      "Applied technical reasoning to field constraints and system-level decision making.",
+      "Strengthened execution discipline for schedule, quality, and communication."
+    ]
+  },
+  {
+    "role": "Embedded Systems Instructor",
+    "organization": "Cassopia Innovation and Skill Development Club",
+    "location": "Addis Ababa, Ethiopia",
+    "startDate": "2024-08-01",
+    "endDate": "",
+    "summary": "Mentors students in Arduino-based embedded systems with practical build-first teaching.",
+    "highlights": [
+      "Teaches Arduino, embedded fundamentals, and applied circuit design.",
+      "Guides students through hands-on mini projects and debugging workflow.",
+      "Builds confidence in practical system integration, not only theory."
+    ]
+  }
+]

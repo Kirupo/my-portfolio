@@ -47,6 +47,11 @@ function CertificateViewer({ certificate, onClose, isDark }) {
                   <p className="text-xs uppercase tracking-[0.2em] text-muted">Certificate Details</p>
                   <h3 className="mt-1 font-display text-xl">{certificate.title}</h3>
                   <p className="mt-1 text-xs uppercase tracking-[0.14em] text-accent">{certificate.issuer}</p>
+                  {certificate.issuedDate ? (
+                    <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-muted">
+                      Issued {certificate.issuedDate}
+                    </p>
+                  ) : null}
                 </div>
                 <div className="flex gap-2">
                   <a
@@ -68,9 +73,36 @@ function CertificateViewer({ certificate, onClose, isDark }) {
               </div>
 
               <div className="mt-3 rounded-xl border border-white/10 bg-black/15 p-3">
-                <p className="text-[11px] uppercase tracking-[0.15em] text-accent">Summary</p>
-                <p className="mt-2 text-sm text-muted">{certificate.summary}</p>
+                <p className="text-[11px] uppercase tracking-[0.15em] text-accent">What It Covers</p>
+                <p className="mt-2 text-sm text-muted">{certificate.whatItCovers}</p>
               </div>
+
+              {Array.isArray(certificate.skillsValidated) && certificate.skillsValidated.length > 0 ? (
+                <div className="mt-3 rounded-xl border border-white/10 bg-black/15 p-3">
+                  <p className="text-[11px] uppercase tracking-[0.15em] text-accent">Skills Validated</p>
+                  <ul className="mt-2 space-y-1.5">
+                    {certificate.skillsValidated.map((skill) => (
+                      <li key={skill} className="flex items-start gap-2 text-sm text-muted">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                        <span>{skill}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {Array.isArray(certificate.appliedIn) && certificate.appliedIn.length > 0 ? (
+                <div className="mt-3 rounded-xl border border-white/10 bg-black/15 p-3">
+                  <p className="text-[11px] uppercase tracking-[0.15em] text-accent">Applied In</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {certificate.appliedIn.map((item) => (
+                      <span key={item} className="rounded-full border border-accent/35 px-3 py-1 text-xs text-muted">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
 
             <div className="min-h-0 flex-1 overflow-hidden">

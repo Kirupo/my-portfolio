@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 function ProjectCard({ project, onOpen }) {
   const previewImage = Array.isArray(project.images) && project.images.length > 0 ? project.images[0] : "";
+  const caseStudy = project.caseStudy || {};
 
   const handleOpen = (event) => {
     event.preventDefault();
@@ -31,7 +32,10 @@ function ProjectCard({ project, onOpen }) {
             onClick={handleOpen}
             className="flex aspect-video items-center justify-center bg-gradient-to-br from-accent/15 to-accentSecondary/15 text-left"
           >
-            <span className="font-display text-sm uppercase tracking-[0.2em] text-muted">Project Overview</span>
+            <div className="text-center">
+              <p className="font-display text-sm uppercase tracking-[0.2em] text-muted">Project Overview</p>
+              <p className="mt-2 text-xs text-muted">Detailed case study available</p>
+            </div>
           </button>
         )}
 
@@ -39,6 +43,7 @@ function ProjectCard({ project, onOpen }) {
           <div>
             <h3 className="font-display text-xl">{project.title}</h3>
             <p className="mt-3 text-sm text-muted">{project.description}</p>
+            {caseStudy.goal ? <p className="mt-3 text-xs text-muted">Goal: {caseStudy.goal}</p> : null}
           </div>
 
           <div className="flex flex-wrap gap-2">

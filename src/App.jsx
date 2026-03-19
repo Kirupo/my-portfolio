@@ -6,19 +6,24 @@ import ProjectModal from "./components/ProjectModal";
 import ThemeToggle from "./components/ThemeToggle";
 import useTheme from "./hooks/useTheme";
 import certificates from "./data/certificates.json";
+import experience from "./data/experience.json";
 import projects from "./data/projects.json";
 import About from "./sections/About";
 import Certificates from "./sections/Certificates";
 import Hero from "./sections/Hero";
+import ProfessionalSnapshot from "./sections/ProfessionalSnapshot";
 import Projects from "./sections/Projects";
 import Teaching from "./sections/Teaching";
+import WorkExperience from "./sections/WorkExperience";
 
 const navItems = [
   { href: "#hero", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#teaching", label: "Teaching" },
   { href: "#projects", label: "Projects" },
   { href: "#certificates", label: "Certificates" },
+  { href: "#contact", label: "Contact" },
 ];
 
 function App() {
@@ -74,12 +79,14 @@ function App() {
 
       <main className="relative z-10">
         <Hero />
+        <ProfessionalSnapshot />
         <About />
+        <WorkExperience experience={experience} />
         <Teaching />
         <Projects projects={projects} onOpenProject={setActiveProject} />
         <Certificates certificates={certificates} onOpenCertificate={setActiveCertificate} />
 
-        <section className="px-4 pb-20 sm:pb-24">
+        <section id="contact" className="px-4 pb-20 sm:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
